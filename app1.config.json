@@ -1,0 +1,11 @@
+{
+	"apps":[
+		{
+			"name": "uniswap-interface",
+			"script": "node",
+			"interpreter": "none",
+			"max_memory_restart": "300M",
+			"args": "express.js"
+		}
+	]
+}
