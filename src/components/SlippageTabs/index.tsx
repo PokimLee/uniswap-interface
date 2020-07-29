@@ -153,9 +153,9 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
       <AutoColumn gap="sm">
         <RowFixed>
           <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
-            Slippage tolerance
+            滑點限制
           </TYPE.black>
-          <QuestionHelper text="Your transaction will revert if the price changes unfavorably by more than this percentage." />
+          <QuestionHelper text="您的交易會被回滾如果價格變化超過設置的滑點" />
         </RowFixed>
         <RowBetween>
           <Option
@@ -229,9 +229,9 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
       <AutoColumn gap="sm">
         <RowFixed>
           <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-            Transaction deadline
+            交易超時時間
           </TYPE.black>
-          <QuestionHelper text="Your transaction will revert if it is pending for more than this long." />
+          <QuestionHelper text="您的交易會被回滾如果確認時間超過設置值" />
         </RowFixed>
         <RowFixed>
           <OptionCustom style={{ width: '80px' }} tabIndex={-1}>
@@ -246,7 +246,7 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
             />
           </OptionCustom>
           <TYPE.body style={{ paddingLeft: '8px' }} fontSize={14}>
-            minutes
+            分鐘
           </TYPE.body>
         </RowFixed>
       </AutoColumn>

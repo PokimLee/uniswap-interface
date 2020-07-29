@@ -165,18 +165,17 @@ export default function SettingsTab() {
             <RowBetween style={{ padding: '0 2rem' }}>
               <div />
               <Text fontWeight={500} fontSize={20}>
-                Are you sure?
+                你確定嗎？
               </Text>
               <StyledCloseIcon onClick={() => setShowConfirmation(false)} />
             </RowBetween>
             <Break />
             <AutoColumn gap="lg" style={{ padding: '0 2rem' }}>
               <Text fontWeight={500} fontSize={20}>
-                Expert mode turns off the confirm transaction prompt and allows high slippage trades that often result
-                in bad rates and lost funds.
+                專家模式關掉了確認彈框，並且允許高滑點的交易，這經常會導致糟糕的匯率和資產損失。
               </Text>
               <Text fontWeight={600} fontSize={20}>
-                ONLY USE THIS MODE IF YOU KNOW WHAT YOU ARE DOING.
+                只有在你非常明確你在做什麼的時候再開啟專家模式
               </Text>
               <ButtonError
                 error={true}
@@ -189,7 +188,7 @@ export default function SettingsTab() {
                 }}
               >
                 <Text fontSize={20} fontWeight={500}>
-                  Turn On Expert Mode
+                  打開專家模式
                 </Text>
               </ButtonError>
             </AutoColumn>
@@ -210,7 +209,7 @@ export default function SettingsTab() {
         <MenuFlyout>
           <AutoColumn gap="md" style={{ padding: '1rem' }}>
             <Text fontWeight={600} fontSize={14}>
-              Transaction Settings
+              交易設置
             </Text>
             <SlippageTabs
               rawSlippage={userSlippageTolerance}
@@ -219,14 +218,14 @@ export default function SettingsTab() {
               setDeadline={setDeadline}
             />
             <Text fontWeight={600} fontSize={14}>
-              Interface Settings
+              界面設置
             </Text>
             <RowBetween>
               <RowFixed>
                 <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
-                  Toggle Expert Mode
+                  專家模式開關
                 </TYPE.black>
-                <QuestionHelper text="Bypasses confirmation modals and allows high slippage trades. Use at your own risk." />
+                <QuestionHelper text="繞過確認彈窗並允許高滑點交易，風險自負" />
               </RowFixed>
               <Toggle
                 isActive={expertMode}
@@ -246,7 +245,7 @@ export default function SettingsTab() {
             <RowBetween>
               <RowFixed>
                 <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
-                  Toggle Dark Mode
+                  黑夜模式開關
                 </TYPE.black>
               </RowFixed>
               <Toggle isActive={darkMode} toggle={toggleDarkMode} />
