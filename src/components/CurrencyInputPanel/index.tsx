@@ -198,7 +198,7 @@ export default function CurrencyInputPanel({
                 }}
               />
               {account && currency && showMaxButton && label !== 'To' && (
-                <StyledBalanceMax onClick={onMax}>MAX</StyledBalanceMax>
+                <StyledBalanceMax onClick={onMax}>全部</StyledBalanceMax>
               )}
             </>
           )}

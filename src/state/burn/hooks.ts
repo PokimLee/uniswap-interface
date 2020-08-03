@@ -123,7 +123,7 @@ export function useDerivedBurnInfo(
   }
 
   if (!parsedAmounts[Field.LIQUIDITY] || !parsedAmounts[Field.CURRENCY_A] || !parsedAmounts[Field.CURRENCY_B]) {
-    error = error ?? 'Enter an amount'
+    error = error ?? '請輸入數量'
   }
 
   return { pair, parsedAmounts, error }

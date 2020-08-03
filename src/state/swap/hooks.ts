@@ -146,7 +146,7 @@ export function useDerivedSwapInfo(): {
   }
 
   if (!parsedAmount) {
-    error = error ?? 'Enter an amount'
+    error = error ?? '請輸入數量'
   }
 
   if (!currencies[Field.INPUT] || !currencies[Field.OUTPUT]) {

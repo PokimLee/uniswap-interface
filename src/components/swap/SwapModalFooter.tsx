@@ -71,9 +71,9 @@ export default function SwapModalFooter({
         <RowBetween>
           <RowFixed>
             <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-              {trade?.tradeType === TradeType.EXACT_INPUT ? 'Minimum received' : 'Maximum sold'}
+              {trade?.tradeType === TradeType.EXACT_INPUT ? '最少獲得' : '最多賣出'}
             </TYPE.black>
-            <QuestionHelper text="Your transaction will revert if there is a large, unfavorable price movement before it is confirmed." />
+            <QuestionHelper text="確認之前如果出現較大的不利價格變動，則您的交易會被取消恢復。" />
           </RowFixed>
           <RowFixed>
             <TYPE.black fontSize={14}>
@@ -93,18 +93,18 @@ export default function SwapModalFooter({
         <RowBetween>
           <RowFixed>
             <TYPE.black color={theme.text2} fontSize={14} fontWeight={400}>
-              Price Impact
+              滑點限制
             </TYPE.black>
-            <QuestionHelper text="The difference between the market price and your price due to trade size." />
+            <QuestionHelper text="市場價格和您的價格之間的差額取決於交易量。" />
           </RowFixed>
           <FormattedPriceImpact priceImpact={priceImpactWithoutFee} />
         </RowBetween>
         <RowBetween>
           <RowFixed>
             <TYPE.black fontSize={14} fontWeight={400} color={theme.text2}>
-              Liquidity Provider Fee
+              流動性提供者費用
             </TYPE.black>
-            <QuestionHelper text="A portion of each trade (0.30%) goes to liquidity providers as a protocol incentive." />
+            <QuestionHelper text="每筆交易的一部分（0.30％）作為協議激勵給流動性提供者。" />
           </RowFixed>
           <TYPE.black fontSize={14}>
             {realizedLPFee ? realizedLPFee?.toSignificant(6) + ' ' + trade?.inputAmount?.currency?.symbol : '-'}

@@ -1,6 +1,6 @@
 {
   "name": "@uniswap/interface",
-  "description": "Uniswap Interface",
+  "description": "Uniswap (繁體中文)",
   "homepage": ".",
   "private": true,
   "devDependencies": {

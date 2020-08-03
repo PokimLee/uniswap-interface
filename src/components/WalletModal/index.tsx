@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReactGA from 'react-ga'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 import { isMobile } from 'react-device-detect'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 import usePrevious from '../../hooks/usePrevious'
@@ -123,6 +124,7 @@ export default function WalletModal({
   confirmedTransactions: string[] // hashes of confirmed
   ENSName?: string
 }) {
+  const { t } = useTranslation()
   // important that these are destructed from the account-specific web3-react context
   const { active, account, connector, activate, error } = useWeb3React()
 
@@ -332,7 +334,7 @@ export default function WalletModal({
           </HeaderRow>
         ) : (
           <HeaderRow>
-            <HoverText>Connect to a wallet</HoverText>
+            <HoverText>{t('Connect to a wallet')}</HoverText>
           </HeaderRow>
         )}
         <ContentWrapper>
@@ -348,9 +350,9 @@ export default function WalletModal({
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <Blurb>
-              <span>New to Ethereum? &nbsp;</span>{' '}
+              <span>{t('New to Ethereum?')} &nbsp;</span>{' '}
               <ExternalLink href="https://ethereum.org/use/#3-what-is-a-wallet-and-which-one-should-i-use">
-                Learn more about wallets
+                {t('Learn more about wallets')}
               </ExternalLink>
             </Blurb>
           )}

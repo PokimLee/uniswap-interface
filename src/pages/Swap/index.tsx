@@ -267,7 +267,7 @@ export default function Swap() {
 
           <AutoColumn gap={'md'}>
             <CurrencyInputPanel
-              label={independentField === Field.OUTPUT && !showWrap ? 'From (estimated)' : 'From'}
+              label={independentField === Field.OUTPUT && !showWrap ? '輸入 (預估)' : '輸入'}
               value={formattedAmounts[Field.INPUT]}
               showMaxButton={!atMaxAmountInput}
               currency={currencies[Field.INPUT]}
@@ -298,7 +298,7 @@ export default function Swap() {
                   </ArrowWrapper>
                   {recipient === null && !showWrap ? (
                     <LinkStyledButton id="add-recipient-button" onClick={() => onChangeRecipient('')}>
-                      + Add a send (optional)
+                      設置接收地址(可選)
                     </LinkStyledButton>
                   ) : null}
                 </AutoRow>
@@ -307,7 +307,7 @@ export default function Swap() {
             <CurrencyInputPanel
               value={formattedAmounts[Field.OUTPUT]}
               onUserInput={handleTypeOutput}
-              label={independentField === Field.INPUT && !showWrap ? 'To (estimated)' : 'To'}
+              label={independentField === Field.INPUT && !showWrap ? '輸出 (預估)' : '輸出'}
               showMaxButton={false}
               currency={currencies[Field.OUTPUT]}
               onCurrencySelect={address => onCurrencySelection(Field.OUTPUT, address)}
@@ -322,7 +322,7 @@ export default function Swap() {
                     <ArrowDown size="16" color={theme.text2} />
                   </ArrowWrapper>
                   <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
-                    - Remove send
+                    取消設置接收地址
                   </LinkStyledButton>
                 </AutoRow>
                 <AddressInputPanel id="recipient" value={recipient} onChange={onChangeRecipient} />
@@ -334,7 +334,7 @@ export default function Swap() {
                 <AutoColumn gap="4px">
                   <RowBetween align="center">
                     <Text fontWeight={500} fontSize={14} color={theme.text2}>
-                      Price
+                      價格
                     </Text>
                     <TradePrice
                       inputCurrency={currencies[Field.INPUT]}
@@ -361,7 +361,7 @@ export default function Swap() {
           </AutoColumn>
           <BottomGrouping>
             {!account ? (
-              <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
+              <ButtonLight onClick={toggleWalletModal}>連接錢包</ButtonLight>
             ) : showWrap ? (
               <ButtonPrimary disabled={Boolean(wrapError)} onClick={onWrap}>
                 {wrapError ?? (wrapType === WrapType.WRAP ? 'Wrap' : wrapType === WrapType.UNWRAP ? 'Unwrap' : null)}
