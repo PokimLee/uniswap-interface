@@ -218,10 +218,10 @@ export default function SlippageTabs({ rawSlippage, setRawSlippage, deadline, se
             }}
           >
             {slippageError === SlippageError.InvalidInput
-              ? 'Enter a valid slippage percentage'
+              ? '輸入有效的滑點百分比'
               : slippageError === SlippageError.RiskyLow
-              ? 'Your transaction may fail'
-              : 'Your transaction may be frontrun'}
+              ? '您的交易可能失敗'
+              : '您的交易可能是搶先交易'}
           </RowBetween>
         )}
       </AutoColumn>

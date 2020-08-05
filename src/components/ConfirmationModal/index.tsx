@@ -80,7 +80,7 @@ export default function ConfirmationModal({
             </ConfirmedIcon>
             <AutoColumn gap="12px" justify={'center'}>
               <Text fontWeight={500} fontSize={20}>
-                {transactionBroadcast ? 'Transaction Submitted' : 'Waiting For Confirmation'}
+                {transactionBroadcast ? '交易已提交' : '等待確認中'}
               </Text>
               <AutoColumn gap="12px" justify={'center'}>
                 <Text fontWeight={600} fontSize={14} color="" textAlign="center">
@@ -103,7 +103,7 @@ export default function ConfirmationModal({
                 </>
               ) : (
                 <Text fontSize={12} color="#565A69" textAlign="center">
-                  Confirm this transaction in your wallet
+                  在您的錢包中確認此交易
                 </Text>
               )}
             </AutoColumn>

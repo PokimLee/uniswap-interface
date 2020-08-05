@@ -58,19 +58,19 @@ export default function SwapModalHeader({
       <AutoColumn justify="flex-start" gap="sm" style={{ padding: '12px 0 0 0px' }}>
         {independentField === Field.INPUT ? (
           <TYPE.italic textAlign="left" style={{ width: '100%' }}>
-            {`Output is estimated. You will receive at least `}
+            {`預估收益。您至少會收到 `}
             <b>
               {slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(6)} {currencies[Field.OUTPUT]?.symbol}
             </b>
-            {' or the transaction will revert.'}
+            {' 否則交易將取消。'}
           </TYPE.italic>
         ) : (
           <TYPE.italic textAlign="left" style={{ width: '100%' }}>
-            {`Input is estimated. You will sell at most `}
+            {`預估付出.您最多將出售 `}
             <b>
               {slippageAdjustedAmounts[Field.INPUT]?.toSignificant(6)} {currencies[Field.INPUT]?.symbol}
             </b>
-            {' or the transaction will revert.'}
+            {' 否則交易將取消。'}
           </TYPE.italic>
         )}
       </AutoColumn>

@@ -222,7 +222,7 @@ export default function Swap() {
   function modalBottom() {
     return (
       <SwapModalFooter
-        confirmText={priceImpactSeverity > 2 ? 'Swap Anyway' : 'Confirm Swap'}
+        confirmText={priceImpactSeverity > 2 ? '仍要交易' : '確定交易'}
         showInverted={showInverted}
         severity={priceImpactSeverity}
         setShowInverted={setShowInverted}
@@ -237,9 +237,9 @@ export default function Swap() {
   }
 
   // text to show while loading
-  const pendingText = `Swapping ${parsedAmounts[Field.INPUT]?.toSignificant(6)} ${
+  const pendingText = `正在用 ${parsedAmounts[Field.INPUT]?.toSignificant(6)} ${
     currencies[Field.INPUT]?.symbol
-  } for ${parsedAmounts[Field.OUTPUT]?.toSignificant(6)} ${currencies[Field.OUTPUT]?.symbol}`
+  } 换 ${parsedAmounts[Field.OUTPUT]?.toSignificant(6)} ${currencies[Field.OUTPUT]?.symbol}`
 
   return (
     <>
