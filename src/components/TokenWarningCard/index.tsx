@@ -97,15 +97,13 @@ export function TokenWarningCards({ currencies }: { currencies: { [field in Fiel
       <AutoColumn gap="lg">
         <AutoRow gap="6px">
           <StyledWarningIcon />
-          <TYPE.main color={'red2'}>Token imported</TYPE.main>
+          <TYPE.main color={'red2'}>已導入代幣</TYPE.main>
         </AutoRow>
         <TYPE.body color={'red2'}>
-          Anyone can create and name any ERC20 token on Ethereum, including creating fake versions of existing tokens
-          and tokens that claim to represent projects that do not have a token.
+          任何人都可以在以太坊上創建和命名任何ERC20代幣，包括創建現有代幣的虛假版本以及聲稱代表沒有代幣的項目的代幣。
         </TYPE.body>
         <TYPE.body color={'red2'}>
-          Similar to Etherscan, this site can load arbitrary tokens via token addresses. Please do your own research
-          before interacting with any ERC20 token.
+          與Etherscan相似，此站點可以通過合約地址加載任意代幣。 與任何ERC20代幣進行交互之前，請先進行自己的研究。
         </TYPE.body>
         {Object.keys(currencies).map(field => {
           const dismissed = field === Field.INPUT ? dismissedToken0 : dismissedToken1
@@ -128,7 +126,7 @@ export function TokenWarningCards({ currencies }: { currencies: { [field in Fiel
             }}
           >
             <TYPE.body color="white" className="token-dismiss-button">
-              I understand
+              清楚明白
             </TYPE.body>
           </ButtonError>
           <div />
