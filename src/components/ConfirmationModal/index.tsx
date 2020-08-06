@@ -92,7 +92,7 @@ export default function ConfirmationModal({
                 <>
                   <ExternalLink href={getEtherscanLink(chainId, hash, 'transaction')}>
                     <Text fontWeight={500} fontSize={14} color={theme.primary1}>
-                      View on Etherscan
+                      在 Etherscan 上查看
                     </Text>
                   </ExternalLink>
                   <ButtonPrimary onClick={onDismiss} style={{ margin: '20px 0 0 0' }}>

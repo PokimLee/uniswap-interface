@@ -79,7 +79,7 @@ export default function TokenWarningCard({ token, ...rest }: TokenWarningCardPro
               : token.name || token.symbol}
           </TYPE.main>
           <ExternalLink style={{ fontWeight: 400 }} href={getEtherscanLink(chainId, token.address, 'token')}>
-            <TYPE.blue> (View on Etherscan)</TYPE.blue>
+            <TYPE.blue> (在 Etherscan 上查看)</TYPE.blue>
           </ExternalLink>
         </AutoColumn>
       </AutoRow>

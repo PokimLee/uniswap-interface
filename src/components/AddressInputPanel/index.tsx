@@ -108,7 +108,7 @@ export default function AddressInputPanel({
               </TYPE.black>
               {address && (
                 <ExternalLink href={getEtherscanLink(chainId, name ?? address, 'address')} style={{ fontSize: '14px' }}>
-                  (View on Etherscan)
+                  (在 Etherscan 上查看)
                 </ExternalLink>
               )}
             </RowBetween>
