@@ -63,22 +63,22 @@ export default function Pool() {
         <AutoColumn gap="lg" justify="center">
           <ButtonPrimary id="join-pool-button" as={Link} style={{ padding: 16 }} to="/add/ETH">
             <Text fontWeight={500} fontSize={20}>
-              Add Liquidity
+              添加流動性資金
             </Text>
           </ButtonPrimary>
 
           <AutoColumn gap="12px" style={{ width: '100%' }}>
             <RowBetween padding={'0 8px'}>
               <Text color={theme.text1} fontWeight={500}>
-                Your Liquidity
+                你提供的流動性資金
               </Text>
-              <Question text="When you add liquidity, you are given pool tokens that represent your share. If you don’t see a pool you joined in this list, try importing a pool below." />
+              <Question text="當你添加了流動性，會收到對應的資金池的流動性代幣代表你在池子中的份額。如果你看不到你加入的資金池，嘗試在下方導入" />
             </RowBetween>
 
             {!account ? (
               <LightCard padding="40px">
                 <TYPE.body color={theme.text3} textAlign="center">
-                  Connect to a wallet to view your liquidity.
+                  連接錢包以查看你提供的流動性資金
                 </TYPE.body>
               </LightCard>
             ) : v2IsLoading ? (
@@ -96,16 +96,16 @@ export default function Pool() {
             ) : (
               <LightCard padding="40px">
                 <TYPE.body color={theme.text3} textAlign="center">
-                  No liquidity found.
+                  沒有找到你參與的資金池
                 </TYPE.body>
               </LightCard>
             )}
 
             <div>
               <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
-                {hasV1Liquidity ? 'Uniswap V1 liquidity found!' : "Don't see a pool you joined?"}{' '}
+                {hasV1Liquidity ? '找到 V1 版的流動性!' : "沒有發現你參與的資金池?"}{' '}
                 <StyledInternalLink id="import-pool-link" to={hasV1Liquidity ? '/migrate/v1' : '/find'}>
-                  {hasV1Liquidity ? 'Migrate now.' : 'Import it.'}
+                  {hasV1Liquidity ? '馬上遷移' : '導入'}
                 </StyledInternalLink>
               </Text>
             </div>
@@ -115,7 +115,7 @@ export default function Pool() {
 
       <div style={{ display: 'flex', alignItems: 'center', marginTop: '1.5rem' }}>
         <ButtonSecondary as={Link} style={{ width: 'initial' }} to="/migrate/v1">
-          Migrate V1 Liquidity
+          遷移 V1 版的流動性
         </ButtonSecondary>
       </div>
     </>
